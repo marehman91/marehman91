@@ -1,0 +1,1089 @@
+<!doctype html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Minibells | منی بیلز — بچوں کے کپڑے</title>
+<meta name="description" content="منی بیلز — بچوں کے پیارے اور آرام دہ کپڑے۔ پورے پاکستان میں ڈیلیوری، سائز ایکسچینج کی سہولت۔ واٹس ایپ پر آسان آرڈر۔">
+<meta name="theme-color" content="#FFF8F4">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Minibells | منی بیلز — بچوں کے کپڑے">
+<meta property="og:description" content="بچوں کے پیارے اور آرام دہ کپڑے۔ پورے پاکستان میں ڈیلیوری۔ واٹس ایپ پر آسان آرڈر۔">
+<link rel="icon" href="images/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Nunito:wght@600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FFF8F4; --surface:#FFFFFF; --ink:#3B2D3A; --muted:#7B6A78; --line:#F1E2E7;
+    --rose:#C2416C; --rose-dark:#A3335A; --rose-soft:#FDE6EE; --peach:#FFEADF; --mint:#E3F5EC; --mint-ink:#1D7A55;
+    --sky:#E6F1FB; --butter:#FFF3D1; --danger:#C0392B;
+    --wa:#178A4A; --wa-dark:#11703B;
+    --shadow:0 6px 24px rgba(120,60,90,.08);
+    --shadow-lg:0 18px 50px rgba(80,30,60,.18);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:'Nunito','Noto Nastaliq Urdu',serif;font-size:17px;line-height:2.3;-webkit-font-smoothing:antialiased}
+  body.lock{overflow:hidden}
+  img{max-width:100%}
+  a{color:var(--rose-dark)}
+  h1,h2,h3{font-weight:700;margin:0;line-height:1.9}
+  p{margin:0}
+  button{font:inherit;color:inherit}
+  bdi{unicode-bidi:isolate}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+  [hidden]{display:none!important}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+  /* ---------- top + header ---------- */
+  .demo{background:#3B2D3A;color:#fff;text-align:center;font-size:13px;padding:4px 12px;line-height:2.5}
+  .topbar{background:var(--rose);color:#fff;text-align:center;font-size:14px;padding:4px 12px;line-height:2.5}
+  .header{position:sticky;top:0;z-index:30;background:rgba(255,248,244,.92);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+  .header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+  .brand img{width:40px;height:40px}
+  .brand-txt{display:flex;flex-direction:column;line-height:1.2}
+  .brand-en{font-family:'Nunito',sans-serif;font-weight:800;font-size:20px;letter-spacing:.2px;color:var(--rose-dark)}
+  .brand-ur{font-size:12px;color:var(--muted);line-height:1.9}
+  .nav{display:none;gap:22px}
+  .nav a{color:var(--ink);text-decoration:none;font-size:15px}
+  .nav a:hover{color:var(--rose)}
+  @media(min-width:860px){.nav{display:flex}}
+  .cart-btn{position:relative;display:flex;align-items:center;gap:6px;background:var(--rose-soft);color:var(--rose-dark);border:0;border-radius:999px;padding:4px 16px;min-height:44px;cursor:pointer;font-weight:700;font-size:15px}
+  .cart-btn svg{width:22px;height:22px}
+  .badge{min-width:22px;height:22px;border-radius:11px;background:var(--rose);color:#fff;font-family:'Nunito',sans-serif;font-size:13px;font-weight:800;line-height:22px;text-align:center;padding:0 6px}
+
+  /* ---------- buttons, chips ---------- */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:4px 22px;min-height:50px;cursor:pointer;font-weight:700;font-size:16px;text-decoration:none;line-height:1.9;transition:transform .15s,background .15s,opacity .15s;-webkit-tap-highlight-color:transparent}
+  .btn:active{transform:scale(.97)}
+  .btn svg{width:22px;height:22px;flex:none}
+  .btn-primary{background:var(--rose);color:#fff}
+  .btn-primary:hover{background:var(--rose-dark)}
+  .btn-wa{background:var(--wa);color:#fff}
+  .btn-wa:hover{background:var(--wa-dark)}
+  .btn-soft{background:var(--rose-soft);color:var(--rose-dark)}
+  .btn-line{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
+  .btn-block{width:100%}
+  .btn-sm{min-height:42px;font-size:15px;padding:2px 14px}
+  .btn[disabled]{opacity:.45;pointer-events:none}
+  .chips{display:flex;gap:8px;overflow-x:auto;padding:2px 2px 6px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{flex:none;border:1.5px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:0 16px;min-height:42px;cursor:pointer;font-size:15px;line-height:2.2;white-space:nowrap;transition:background .15s,border-color .15s}
+  .chip.active{background:var(--rose);border-color:var(--rose);color:#fff}
+  .link-btn{background:none;border:0;color:var(--rose-dark);text-decoration:underline;cursor:pointer;padding:0;font-size:inherit}
+
+  /* ---------- hero ---------- */
+  .hero{padding:22px 0 8px}
+  .hero-card{position:relative;overflow:hidden;border-radius:28px;background:linear-gradient(135deg,#FFE3EC 0%,#FFF0E3 55%,#E9F6EF 100%);padding:26px 20px 22px;display:grid;gap:10px}
+  .hero h1{font-size:28px;line-height:1.95;text-wrap:balance}
+  .hero p{color:#5d4a5a;font-size:16px;max-width:520px}
+  .hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+  .hero-art{display:none}
+  .hero-dots{position:absolute;inset:0;pointer-events:none;opacity:.5;background-image:radial-gradient(#fff 2px,transparent 2.5px);background-size:22px 22px;mask-image:linear-gradient(to left,#000,transparent 60%);-webkit-mask-image:linear-gradient(to left,#000,transparent 60%)}
+  @media(min-width:760px){
+    .hero-card{grid-template-columns:1.3fr 1fr;align-items:center;padding:44px 48px}
+    .hero h1{font-size:40px}
+    .hero p{font-size:18px}
+    .hero-art{display:block;position:relative;z-index:1}
+  }
+  .hero-text{position:relative;z-index:1}
+
+  .trust-row{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0 4px}
+  @media(min-width:760px){.trust-row{grid-template-columns:repeat(4,1fr)}}
+  .trust-item{display:flex;align-items:center;gap:10px;background:#fff;border-radius:16px;padding:10px 12px;box-shadow:var(--shadow);font-size:14px;line-height:2.3}
+  .trust-ico{flex:none;width:38px;height:38px;border-radius:12px;display:grid;place-items:center}
+  .trust-ico svg{width:22px;height:22px}
+
+  /* ---------- sections ---------- */
+  section{scroll-margin-top:76px}
+  .sec{padding:30px 0 6px}
+  .sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;margin-bottom:12px}
+  .sec h2{font-size:24px}
+  @media(min-width:760px){.sec h2{font-size:30px}.sec{padding:44px 0 10px}}
+  .sec-sub{color:var(--muted);font-size:15px}
+
+  /* ---------- filters + grid ---------- */
+  .filters{display:grid;gap:4px;margin-bottom:6px}
+  .filter-label{font-size:14px;color:var(--muted);line-height:1.8}
+  .result-info{font-size:14px;color:var(--muted);margin:2px 0 10px;line-height:1.9}
+  .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  @media(min-width:720px){.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}}
+  @media(min-width:1000px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+  .card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+  @media(hover:hover){.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}}
+  .card-img{position:relative;display:block;width:100%;aspect-ratio:5/6;background:var(--rose-soft);border:0;padding:0;cursor:pointer;overflow:hidden}
+  .card-img img{width:100%;height:100%;object-fit:cover;display:block}
+  .tag{position:absolute;top:10px;right:10px;background:#fff;color:var(--rose-dark);border-radius:999px;padding:0 10px;font-size:13px;font-weight:700;line-height:2;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+  .off{direction:ltr;position:absolute;top:10px;left:10px;background:var(--rose);color:#fff;border-radius:999px;padding:0 9px;font-family:'Nunito',sans-serif;font-size:12px;font-weight:800;line-height:24px}
+  .sold-veil{position:absolute;inset:0;background:rgba(255,255,255,.55);display:grid;place-items:center}
+  .sold-veil span{background:var(--ink);color:#fff;border-radius:999px;padding:0 16px;font-size:14px;line-height:2.1}
+  .card-body{padding:8px 12px 12px;display:flex;flex-direction:column;gap:2px;flex:1}
+  .code{font-family:'Nunito',sans-serif;font-size:12px;font-weight:800;color:var(--muted);letter-spacing:.4px;line-height:1.6;direction:ltr;text-align:right}
+  .card h3{font-size:16px;line-height:1.9}
+  .price{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;font-weight:700;color:var(--rose-dark);font-size:16px;line-height:1.9}
+  .price s{color:var(--muted);font-weight:600;font-size:13px}
+  .mini-sizes{display:flex;flex-wrap:wrap;gap:4px;margin:4px 0 8px}
+  .mini-size{font-size:12px;line-height:1.9;padding:0 7px;border-radius:8px;background:var(--mint);color:var(--mint-ink)}
+  .mini-size.hit{background:var(--mint-ink);color:#fff}
+  .mini-none{font-size:12px;color:var(--muted)}
+  .card .btn{margin-top:auto}
+  .skel{background:linear-gradient(90deg,#f6ecef 25%,#fbf4f6 50%,#f6ecef 75%);background-size:200% 100%;animation:sh 1.2s infinite;border-radius:20px;aspect-ratio:5/8}
+  @keyframes sh{to{background-position:-200% 0}}
+  .empty{grid-column:1/-1;text-align:center;background:#fff;border-radius:20px;padding:26px 16px;color:var(--muted)}
+
+  /* ---------- how to order ---------- */
+  .steps{display:grid;gap:12px;counter-reset:s}
+  @media(min-width:760px){.steps{grid-template-columns:repeat(4,1fr)}}
+  .step{background:#fff;border-radius:20px;padding:14px 16px;box-shadow:var(--shadow);display:flex;gap:12px;align-items:flex-start}
+  @media(min-width:760px){.step{flex-direction:column}}
+  .step-n{flex:none;width:42px;height:42px;border-radius:14px;background:var(--rose-soft);color:var(--rose-dark);font-family:'Nunito',sans-serif;font-weight:800;font-size:20px;display:grid;place-items:center;line-height:1}
+  .step h3{font-size:17px}
+  .step p{font-size:14px;color:var(--muted);line-height:2.35}
+
+  /* ---------- size chart ---------- */
+  .table-card{background:#fff;border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
+  table{width:100%;border-collapse:collapse;font-size:15px}
+  th,td{padding:6px 12px;text-align:center;border-bottom:1px solid var(--line);line-height:2}
+  th{background:var(--rose-soft);color:var(--rose-dark);font-weight:700;font-size:14px}
+  tr:last-child td{border-bottom:0}
+  td.num{font-family:'Nunito',sans-serif;font-weight:700}
+  .note{font-size:14px;color:var(--muted);margin-top:10px;line-height:2}
+
+  /* ---------- trust / payment / faq ---------- */
+  .two{display:grid;gap:12px}
+  @media(min-width:760px){.two{grid-template-columns:1fr 1fr}}
+  .panel{background:#fff;border-radius:20px;padding:16px;box-shadow:var(--shadow)}
+  .panel h3{font-size:18px;margin-bottom:4px}
+  .ticks{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+  .ticks li{display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:2.4}
+  .ticks li::before{content:"";flex:none;width:20px;height:20px;margin-top:8px;border-radius:50%;background:var(--mint) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%231D7A55' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat}
+  .reviews{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+  @media(min-width:760px){.reviews{grid-template-columns:repeat(4,1fr)}}
+  .reviews a{display:block;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);background:#fff}
+  .reviews img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover}
+  .accounts{display:grid;gap:12px}
+  @media(min-width:760px){.accounts{grid-template-columns:repeat(3,1fr)}}
+  .acc{background:#fff;border-radius:20px;padding:14px 16px;box-shadow:var(--shadow);border-top:4px solid var(--rose)}
+  .acc-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+  .acc-label{font-weight:700;font-size:16px}
+  .acc-prov{font-family:'Nunito',sans-serif;font-weight:800;font-size:13px;color:var(--muted)}
+  .acc-row{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:4px;font-size:14px;color:var(--muted);line-height:2}
+  .acc-val{font-family:'Nunito',sans-serif;font-weight:800;color:var(--ink);font-size:16px;direction:ltr}
+  .copy{flex:none;border:0;background:var(--rose-soft);color:var(--rose-dark);border-radius:10px;padding:0 10px;min-height:34px;font-size:13px;cursor:pointer;line-height:2.2}
+  .pay-warn{margin-top:12px;background:var(--butter);border-radius:16px;padding:10px 14px;font-size:14px;line-height:2.4}
+  .faq details{background:#fff;border-radius:16px;box-shadow:var(--shadow);margin-bottom:10px;overflow:hidden}
+  .faq summary{cursor:pointer;list-style:none;padding:8px 16px;font-weight:700;font-size:16px;display:flex;justify-content:space-between;align-items:center;gap:10px;line-height:2.4}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-family:'Nunito',sans-serif;font-size:22px;color:var(--rose);flex:none;transition:transform .2s}
+  .faq details[open] summary::after{transform:rotate(45deg)}
+  .faq .ans{padding:0 16px 12px;color:#5d4a5a;font-size:15px;line-height:2.45}
+  .about{background:linear-gradient(135deg,#FFE9F0,#FFF4EA);border-radius:24px;padding:22px 20px;display:flex;gap:16px;align-items:flex-start}
+  .about img{width:56px;height:56px;flex:none}
+  .about p{color:#5d4a5a;font-size:16px;line-height:2.45}
+
+  /* ---------- footer ---------- */
+  footer{margin-top:40px;background:#fff;border-top:1px solid var(--line);padding:24px 0 120px}
+  .foot{display:grid;gap:14px;text-align:center;justify-items:center}
+  .socials{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+  .socials a{display:inline-flex;align-items:center;gap:6px;text-decoration:none;background:var(--rose-soft);color:var(--rose-dark);border-radius:999px;padding:2px 14px;font-size:14px;line-height:2.2}
+  .copy-note{font-size:13px;color:var(--muted)}
+
+  /* ---------- floating ---------- */
+  .wa-float{position:fixed;left:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:35;display:flex;align-items:center;gap:6px;background:var(--wa);color:#fff;text-decoration:none;border-radius:999px;padding:4px 16px 4px 12px;min-height:52px;box-shadow:0 10px 26px rgba(23,138,74,.35);font-weight:700;font-size:15px;line-height:2;transition:bottom .25s}
+  .wa-float svg{width:26px;height:26px}
+  @media(max-width:600px){.wa-float{width:56px;height:56px;padding:0;justify-content:center}.wa-float span{display:none}.wa-float svg{width:30px;height:30px}}
+  body.has-cart .wa-float{bottom:calc(86px + env(safe-area-inset-bottom))}
+  .cart-bar{position:fixed;left:0;right:0;bottom:0;z-index:34;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);border-top:1px solid var(--line);box-shadow:0 -8px 24px rgba(80,30,60,.08);transform:translateY(110%);visibility:hidden;transition:transform .25s,visibility .25s}
+  body.has-cart .cart-bar{transform:none;visibility:visible}
+  .cart-bar .btn{width:100%;max-width:560px;margin:0 auto;display:flex;justify-content:space-between}
+  .cart-bar .cb-total{font-family:'Nunito',sans-serif;font-weight:800}
+  .toast{position:fixed;left:50%;bottom:calc(150px + env(safe-area-inset-bottom));transform:translate(-50%,20px);z-index:80;background:var(--ink);color:#fff;border-radius:999px;padding:4px 18px;font-size:15px;line-height:2.1;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;width:max-content;max-width:calc(100% - 32px);text-align:center}
+  .toast.show{opacity:1;transform:translate(-50%,0)}
+
+  /* ---------- sheets (popups) ---------- */
+  .overlay{position:fixed;inset:0;z-index:60;background:rgba(59,45,58,.5);display:flex;align-items:flex-end;justify-content:center;opacity:0;transition:opacity .22s}
+  .overlay.open{opacity:1}
+  .sheet{position:relative;background:#fff;width:100%;max-width:560px;max-height:94vh;max-height:94dvh;display:flex;flex-direction:column;border-radius:26px 26px 0 0;transform:translateY(40px);transition:transform .25s;overflow:hidden}
+  .overlay.open .sheet{transform:none}
+  @media(min-width:720px){.overlay{align-items:center;padding:20px}.sheet{border-radius:26px;max-height:90vh}}
+  .sheet-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 16px;border-bottom:1px solid var(--line);flex:none}
+  .sheet-head h2{font-size:19px}
+  .icon-btn{flex:none;width:42px;height:42px;border-radius:50%;border:0;background:var(--rose-soft);color:var(--rose-dark);cursor:pointer;display:grid;place-items:center}
+  .icon-btn svg{width:20px;height:20px}
+  .sheet-body{overflow-y:auto;padding:14px 16px 18px;flex:1;-webkit-overflow-scrolling:touch}
+  .sheet-foot{flex:none;padding:10px 16px calc(12px + env(safe-area-inset-bottom));border-top:1px solid var(--line);background:#fff;display:grid;gap:8px}
+
+  .gallery{border-radius:20px;overflow:hidden;background:var(--rose-soft);aspect-ratio:5/6;max-height:52vh;margin:0 auto;width:100%}
+  .gallery img{width:100%;height:100%;object-fit:cover;display:block}
+  .thumbs{display:flex;gap:8px;margin-top:8px;overflow-x:auto}
+  .thumbs button{flex:none;width:58px;height:70px;border-radius:12px;overflow:hidden;border:2px solid transparent;padding:0;cursor:pointer;background:var(--rose-soft)}
+  .thumbs button.active{border-color:var(--rose)}
+  .thumbs img{width:100%;height:100%;object-fit:cover}
+  .p-name{font-size:21px;margin-top:6px}
+  .p-desc{color:#5d4a5a;font-size:15px;line-height:2.4;margin-top:4px}
+  .field-label{display:flex;justify-content:space-between;align-items:center;margin:12px 0 4px;font-weight:700;font-size:15px;line-height:2}
+  .size-pick{display:flex;flex-wrap:wrap;gap:8px}
+  .size-opt{position:relative;display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--line);background:#fff;border-radius:14px;padding:0 16px;min-height:46px;cursor:pointer;font-size:15px;line-height:2.4;transition:all .15s}
+  .size-opt.active{border-color:var(--rose);background:var(--rose);color:#fff}
+  .size-opt.out{color:#a8979f;background:#faf6f7;border-style:dashed}
+  .size-opt.out small{font-size:11px;line-height:1.9;background:#efe6ea;color:#7B6A78;border-radius:999px;padding:0 7px}
+  .shake{animation:shake .35s}
+  @keyframes shake{25%{transform:translateX(5px)}50%{transform:translateX(-5px)}75%{transform:translateX(3px)}}
+  .restock{margin-top:10px;background:var(--butter);border-radius:14px;padding:8px 12px;font-size:14px;line-height:2.4}
+  .qty-row{display:flex;justify-content:space-between;align-items:center;margin-top:12px;font-weight:700;font-size:15px}
+  .stepper{display:flex;align-items:center;gap:4px;background:var(--rose-soft);border-radius:999px;padding:3px}
+  .stepper button{width:38px;height:38px;border-radius:50%;border:0;background:#fff;color:var(--rose-dark);font-family:'Nunito',sans-serif;font-size:20px;font-weight:800;cursor:pointer;line-height:1}
+  .stepper span{min-width:28px;text-align:center;font-family:'Nunito',sans-serif;font-weight:800;line-height:1}
+  .stepper.sm button{width:32px;height:32px;font-size:17px}
+  details.inline-chart{margin-top:10px;border:1.5px dashed var(--line);border-radius:14px;padding:0 12px}
+  details.inline-chart summary{cursor:pointer;color:var(--rose-dark);font-size:14px;line-height:2.4}
+  details.inline-chart table{font-size:13px;margin-bottom:10px}
+
+  .ci{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+  .ci:last-child{border-bottom:0}
+  .ci img{flex:none;width:64px;height:76px;border-radius:12px;object-fit:cover;background:var(--rose-soft)}
+  .ci-main{flex:1;min-width:0}
+  .ci-name{font-weight:700;font-size:15px;line-height:1.9}
+  .ci-meta{font-size:13px;color:var(--muted);line-height:1.9}
+  .ci-bottom{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:2px}
+  .ci-price{font-weight:700;color:var(--rose-dark);font-size:15px}
+  .ci-del{border:0;background:none;color:var(--muted);font-size:13px;cursor:pointer;text-decoration:underline;padding:0}
+  .sum{background:var(--bg);border-radius:16px;padding:8px 14px;margin:12px 0 4px}
+  .sum-row{display:flex;justify-content:space-between;font-size:15px;line-height:2.1}
+  .sum-row b{font-family:'Nunito',sans-serif}
+  .sum-row.total{border-top:1px dashed #e3cdd5;margin-top:4px;padding-top:4px;font-weight:700;font-size:17px;color:var(--rose-dark)}
+  .form{display:grid;gap:10px;margin-top:12px}
+  .form h3{font-size:17px}
+  .fld label{display:block;font-size:14px;font-weight:700;line-height:2;margin-bottom:2px}
+  .fld label small{font-weight:400;color:var(--muted)}
+  .fld input,.fld textarea{width:100%;font:inherit;font-size:16px;border:1.5px solid var(--line);border-radius:14px;padding:6px 14px;background:#fff;color:var(--ink);line-height:2;outline:none;transition:border-color .15s}
+  .fld input:focus,.fld textarea:focus{border-color:var(--rose)}
+  .fld textarea{min-height:92px;resize:vertical}
+  .fld input[type=tel]{direction:ltr;text-align:right;font-family:'Nunito',sans-serif;font-weight:700}
+  .fld.err input,.fld.err textarea{border-color:var(--danger)}
+  .fld .msg{display:none;color:var(--danger);font-size:13px;line-height:2}
+  .fld.err .msg{display:block}
+  .info-box{background:var(--sky);border-radius:14px;padding:8px 12px;font-size:14px;line-height:2.4}
+  .done-ico{width:72px;height:72px;margin:6px auto 4px;border-radius:50%;background:var(--mint);display:grid;place-items:center}
+  .done-ico svg{width:38px;height:38px}
+  .center{text-align:center}
+  .order-no{display:inline-block;background:var(--rose-soft);color:var(--rose-dark);border-radius:999px;padding:0 14px;font-family:'Nunito',sans-serif;font-weight:800;direction:ltr;line-height:2}
+  .todo{list-style:none;margin:14px 0;padding:0;display:grid;gap:8px;counter-reset:t}
+  .todo li{counter-increment:t;display:flex;gap:10px;align-items:flex-start;background:var(--bg);border-radius:14px;padding:6px 12px;font-size:15px;line-height:2.4}
+  .todo li::before{content:counter(t);flex:none;width:28px;height:28px;margin-top:6px;border-radius:50%;background:var(--rose);color:#fff;font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;display:grid;place-items:center;line-height:1}
+  .big-total{font-family:'Nunito',sans-serif;font-weight:800;color:var(--rose-dark)}
+</style>
+</head>
+<body>
+<noscript><p style="padding:16px;text-align:center">ویب سائٹ دیکھنے کے لیے براؤزر میں JavaScript آن کریں، یا ہمیں واٹس ایپ کریں۔</p></noscript>
+
+<div class="demo" id="demoBar" hidden>نمونہ ویب سائٹ: ابھی سب تفصیل مثال کے طور پر ہے</div>
+<div class="topbar" id="topbar">پورے پاکستان میں ڈیلیوری · سائز بدلنے کی سہولت</div>
+
+<header class="header" id="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Minibells">
+      <img src="images/logo.svg" alt="">
+      <span class="brand-txt"><span class="brand-en">Minibells</span><span class="brand-ur">منی بیلز · بچوں کے کپڑے</span></span>
+    </a>
+    <nav class="nav" aria-label="مینو">
+      <a href="#shop">کپڑے</a><a href="#how">آرڈر کا طریقہ</a><a href="#sizes">سائز چارٹ</a><a href="#payment">پیمنٹ</a><a href="#faq">سوال و جواب</a>
+    </nav>
+    <button class="cart-btn" id="cartBtn" type="button" aria-label="ٹوکری">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l-1 13H7L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+      <span>ٹوکری</span><span class="badge" id="cartCount">0</span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-card">
+        <div class="hero-dots"></div>
+        <div class="hero-text">
+          <h1>بچوں کے پیارے اور آرام دہ کپڑے</h1>
+          <p id="tagline"></p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#shop">کپڑے دیکھیں</a>
+            <a class="btn btn-line" href="#how">آرڈر کیسے کریں؟</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <svg viewBox="0 0 360 300" width="100%">
+            <circle cx="250" cy="150" r="120" fill="#fff" opacity=".6"/>
+            <path d="M70 70 H300" stroke="#E7C9D3" stroke-width="5" stroke-linecap="round"/>
+            <g transform="translate(110 70)">
+              <path d="M0 0 v16" stroke="#C9A7B4" stroke-width="3"/>
+              <path d="M-40 46 L0 16 L40 46" fill="none" stroke="#C9A7B4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M-26 46 H26 L32 86 H-32 Z" fill="#F28AA6"/>
+              <circle cx="-30" cy="54" r="12" fill="#F7A9BE"/><circle cx="30" cy="54" r="12" fill="#F7A9BE"/>
+              <rect x="-33" y="84" width="66" height="9" rx="4" fill="#C2416C"/>
+              <path d="M-33 92 H33 L66 196 Q0 214 -66 196 Z" fill="#F28AA6"/>
+              <path d="M-50 170 Q0 186 50 170" stroke="#fff" stroke-width="3" fill="none" opacity=".6" stroke-dasharray="2 8" stroke-linecap="round"/>
+              <circle cx="0" cy="88" r="7" fill="#fff"/>
+            </g>
+            <g transform="translate(250 70)">
+              <path d="M0 0 v16" stroke="#C9A7B4" stroke-width="3"/>
+              <path d="M-40 46 L0 16 L40 46" fill="none" stroke="#C9A7B4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M-30 46 L-10 40 Q0 52 10 40 L30 46 L60 72 L44 92 L30 82 V186 H-30 V82 L-44 92 L-60 72 Z" fill="#8EC5EC"/>
+              <circle cx="0" cy="70" r="4" fill="#fff"/><circle cx="0" cy="98" r="4" fill="#fff"/><circle cx="0" cy="126" r="4" fill="#fff"/>
+            </g>
+            <g transform="translate(300 34) rotate(14)">
+              <path d="M0 -14c-8 0-14 6-14 14v10l-5 6h38l-5-6V0c0-8-6-14-14-14z" fill="#F5B85C"/><circle cx="0" cy="20" r="4" fill="#F5B85C"/>
+            </g>
+            <g transform="translate(46 40) rotate(-12)">
+              <path d="M0 -12c-7 0-12 5-12 12v8l-4 5h32l-4-5V0c0-7-5-12-12-12z" fill="#7CCBA2"/><circle cx="0" cy="17" r="3.5" fill="#7CCBA2"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <div class="trust-row">
+        <div class="trust-item"><span class="trust-ico" style="background:var(--rose-soft)"><svg viewBox="0 0 24 24" fill="none" stroke="#C2416C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3"/></svg></span>روزانہ پیکنگ ویڈیوز</div>
+        <div class="trust-item"><span class="trust-ico" style="background:var(--mint)"><svg viewBox="0 0 24 24" fill="none" stroke="#1D7A55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13l-3-3M20 15H7l3 3"/></svg></span>سائز بدلنے کی سہولت</div>
+        <div class="trust-item"><span class="trust-ico" style="background:var(--sky)"><svg viewBox="0 0 24 24" fill="none" stroke="#2D6FA3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></span>پورے پاکستان میں ڈیلیوری</div>
+        <div class="trust-item"><span class="trust-ico" style="background:var(--butter)"><svg viewBox="0 0 24 24" fill="none" stroke="#A8741A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg></span>ہر آرڈر کا ٹریکنگ نمبر</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="shop">
+    <div class="wrap">
+      <div class="sec-head"><div><h2>ہمارے کپڑے</h2><p class="sec-sub">جو سائز موجود ہے وہ سبز رنگ میں نظر آئے گا</p></div></div>
+      <div class="filters">
+        <div class="chips" id="catChips" role="group" aria-label="کس کے لیے">
+          <button class="chip active" data-cat="all" type="button">سب کپڑے</button>
+          <button class="chip" data-cat="girl" type="button">لڑکیوں کے</button>
+          <button class="chip" data-cat="boy" type="button">لڑکوں کے</button>
+        </div>
+        <div class="filter-label">کون سا سائز چاہیے؟</div>
+        <div class="chips" id="sizeChips" role="group" aria-label="سائز"></div>
+      </div>
+      <p class="result-info" id="resultInfo" aria-live="polite"></p>
+      <div class="grid" id="grid">
+        <div class="skel"></div><div class="skel"></div><div class="skel"></div><div class="skel"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="how">
+    <div class="wrap">
+      <div class="sec-head"><h2>آرڈر کیسے کریں؟</h2></div>
+      <div class="steps">
+        <div class="step"><span class="step-n">1</span><div><h3>کپڑا اور سائز چنیں</h3><p>کپڑے پر دبائیں، سائز چنیں اور "آرڈر کریں" دبائیں۔</p></div></div>
+        <div class="step"><span class="step-n">2</span><div><h3>اپنا نام اور پتہ لکھیں</h3><p>بٹن دبانے پر واٹس ایپ کھلے گا اور آرڈر خود لکھا ہوا ہوگا، بس "Send" دبائیں۔</p></div></div>
+        <div class="step"><span class="step-n">3</span><div><h3>ایڈوانس پیمنٹ کریں</h3><p>بینک، جاز کیش یا ایزی پیسہ سے پیمنٹ کر کے اسکرین شاٹ واٹس ایپ پر بھیجیں۔</p></div></div>
+        <div class="step"><span class="step-n">4</span><div><h3>پارسل آپ کے گھر</h3><p>پارسل روانہ ہوتے ہی ہم آپ کو ٹریکنگ نمبر بھیج دیں گے۔</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="sizes">
+    <div class="wrap">
+      <div class="sec-head"><h2>سائز چارٹ</h2></div>
+      <div class="table-card" id="sizeTable"></div>
+      <p class="note" id="sizeNote"></p>
+    </div>
+  </section>
+
+  <section class="sec" id="trust">
+    <div class="wrap">
+      <div class="sec-head"><h2>ہم پر بھروسہ کیوں کریں؟</h2></div>
+      <div class="two">
+        <div class="panel">
+          <h3>آپ کا پیسہ اور بھروسہ ہماری ذمہ داری</h3>
+          <ul class="ticks" id="trustList"></ul>
+        </div>
+        <div class="panel">
+          <h3>روزانہ کی پیکنگ خود دیکھیں</h3>
+          <p class="sec-sub" style="margin-bottom:10px">ہم ہر روز جانے والے پارسلز کی ویڈیو ٹک ٹاک پر لگاتے ہیں۔</p>
+          <a class="btn btn-primary btn-block" id="tiktokBtn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 3c.4 2.2 1.8 3.7 4 3.9v3.2c-1.5.1-2.8-.4-4-1.2v6.3c0 3.6-2.6 5.8-5.7 5.8-3.2 0-5.6-2.5-5.4-5.7.2-3 2.8-5.2 6-4.9v3.3c-1.4-.3-2.8.6-2.8 2 0 1.2.9 2.1 2.1 2.1 1.4 0 2.3-1 2.3-2.6V3h3.5z"/></svg>
+            ٹک ٹاک پر ویڈیوز دیکھیں
+          </a>
+        </div>
+      </div>
+      <div class="reviews" id="reviews" hidden></div>
+    </div>
+  </section>
+
+  <section class="sec" id="payment">
+    <div class="wrap">
+      <div class="sec-head"><div><h2>پیمنٹ کی تفصیل</h2><p class="sec-sub">ہم ایڈوانس پیمنٹ پر آرڈر بھیجتے ہیں</p></div></div>
+      <div class="accounts" id="accounts"></div>
+      <div class="pay-warn" id="payWarn"></div>
+    </div>
+  </section>
+
+  <section class="sec faq" id="faq">
+    <div class="wrap">
+      <div class="sec-head"><h2>اکثر پوچھے جانے والے سوال</h2></div>
+      <div id="faqList"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="about">
+    <div class="wrap">
+      <div class="about"><img src="images/logo.svg" alt=""><div><h2 style="font-size:22px">ہمارے بارے میں</h2><p id="aboutText"></p></div></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a class="brand" href="#top"><img src="images/logo.svg" alt=""><span class="brand-txt"><span class="brand-en">Minibells</span><span class="brand-ur">منی بیلز</span></span></a>
+    <div class="socials" id="socials"></div>
+    <p class="copy-note" id="copyNote"></p>
+  </div>
+</footer>
+
+<a class="wa-float" id="waFloat" target="_blank" rel="noopener" aria-label="واٹس ایپ پر سوال پوچھیں">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.5-.7-2.2-1.4-.6-.5-1-1.2-1.2-1.4-.1-.2 0-.4.1-.5l.4-.4.3-.5v-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 2.9 4.6 4 .6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.2z"/></svg>
+  <span>سوال پوچھیں</span>
+</a>
+
+<div class="cart-bar" id="cartBar">
+  <button class="btn btn-primary" id="cartBarBtn" type="button"><span>ٹوکری دیکھیں (<bdi id="cbCount">0</bdi>)</span><span class="cb-total" id="cbTotal"></span></button>
+</div>
+
+<!-- Product popup -->
+<div class="overlay" id="productSheet" hidden role="dialog" aria-modal="true" aria-labelledby="pTitle">
+  <div class="sheet">
+    <div class="sheet-head"><h2 id="pTitle">کپڑے کی تفصیل</h2><button class="icon-btn" data-close type="button" aria-label="بند کریں"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <div class="sheet-body" id="pBody"></div>
+    <div class="sheet-foot" id="pFoot">
+      <button class="btn btn-primary btn-block" id="pOrder" type="button">آرڈر کریں</button>
+      <button class="btn btn-soft btn-block" id="pAdd" type="button">ٹوکری میں ڈالیں، اور کپڑے دیکھیں</button>
+    </div>
+  </div>
+</div>
+
+<!-- Cart popup -->
+<div class="overlay" id="cartSheet" hidden role="dialog" aria-modal="true" aria-labelledby="cTitle">
+  <div class="sheet">
+    <div class="sheet-head"><h2 id="cTitle">آپ کی ٹوکری</h2><button class="icon-btn" data-close type="button" aria-label="بند کریں"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <div class="sheet-body">
+      <div id="cartItems"></div>
+      <div id="cartFilled">
+        <div class="sum" id="cartSum"></div>
+        <form class="form" id="orderForm" novalidate>
+          <h3>ڈیلیوری کی تفصیل</h3>
+          <div class="fld" data-f="name"><label for="fName">نام</label><input id="fName" name="name" autocomplete="name" placeholder="آپ کا نام"><span class="msg">اپنا نام لکھیں</span></div>
+          <div class="fld" data-f="phone"><label for="fPhone">موبائل نمبر</label><input id="fPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="03XX XXXXXXX"><span class="msg">صحیح موبائل نمبر لکھیں، جیسے 03001234567</span></div>
+          <div class="fld" data-f="city"><label for="fCity">شہر</label><input id="fCity" name="city" list="cities" autocomplete="address-level2" placeholder="جیسے لاہور"><span class="msg">شہر کا نام لکھیں</span></div>
+          <div class="fld" data-f="address"><label for="fAddr">مکمل پتہ</label><textarea id="fAddr" name="address" autocomplete="street-address" placeholder="گھر نمبر، گلی، محلہ، کوئی نشانی"></textarea><span class="msg">مکمل پتہ لکھیں تاکہ پارسل صحیح جگہ پہنچے</span></div>
+          <div class="fld" data-f="note"><label for="fNote">کوئی خاص بات <small>(اختیاری)</small></label><input id="fNote" name="note" placeholder=""></div>
+          <div class="info-box" id="advanceNote"></div>
+        </form>
+      </div>
+    </div>
+    <div class="sheet-foot" id="cartFoot">
+      <button class="btn btn-wa btn-block" id="sendOrder" type="submit" form="orderForm">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+        واٹس ایپ پر آرڈر بھیجیں
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Thank you popup -->
+<div class="overlay" id="thanksSheet" hidden role="dialog" aria-modal="true" aria-labelledby="tTitle">
+  <div class="sheet">
+    <div class="sheet-head"><h2 id="tTitle">شکریہ!</h2><button class="icon-btn" data-close type="button" aria-label="بند کریں"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <div class="sheet-body" id="tBody"></div>
+    <div class="sheet-foot">
+      <a class="btn btn-wa btn-block" id="tWa" target="_blank" rel="noopener">واٹس ایپ نہیں کھلا؟ یہاں دبائیں</a>
+      <button class="btn btn-line btn-block" data-close type="button">ٹھیک ہے</button>
+    </div>
+  </div>
+</div>
+
+<datalist id="cities">
+  <option value="کراچی"><option value="لاہور"><option value="اسلام آباد"><option value="راولپنڈی"><option value="فیصل آباد"><option value="ملتان"><option value="پشاور"><option value="کوئٹہ"><option value="حیدرآباد"><option value="گوجرانوالہ"><option value="سیالکوٹ"><option value="سرگودھا"><option value="بہاولپور"><option value="سکھر"><option value="ایبٹ آباد"><option value="مردان"><option value="کوہاٹ"><option value="ساہیوال"><option value="رحیم یار خان"><option value="ڈیرہ اسماعیل خان">
+</datalist>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script src="config.js"></script>
+<script>
+(function () {
+  'use strict';
+  var C = window.MINIBELLS || {};
+
+  /* ================= helpers ================= */
+  var $ = function (s, el) { return (el || document).querySelector(s); };
+  var $all = function (s, el) { return Array.prototype.slice.call((el || document).querySelectorAll(s)); };
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  function normDigits(s) {
+    return String(s == null ? '' : s).replace(/[۰-۹٠-٩]/g, function (d) {
+      var c = d.charCodeAt(0); return String(c >= 0x06F0 ? c - 0x06F0 : c - 0x0660);
+    });
+  }
+  function toNum(v) { var n = parseInt(normDigits(v).replace(/[^\d]/g, ''), 10); return isNaN(n) ? 0 : n; }
+  function fmt(n) { return Number(n || 0).toLocaleString('en-US'); }
+  function money(n) { return fmt(n) + ' روپے'; }
+  var FSI = '⁨', PDI = '⁩';
+  function iso(s) { return FSI + s + PDI; }
+  function waNumber() { return normDigits(C.whatsappNumber || '').replace(/\D/g, ''); }
+  function waLink(text) { return 'https://wa.me/' + waNumber() + (text ? '?text=' + encodeURIComponent(text) : ''); }
+  var store = {
+    get: function (k, d) { try { var v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } },
+    set: function (k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+  };
+  var toastTimer;
+  function toast(msg) {
+    var t = $('#toast'); t.textContent = msg; t.classList.add('show');
+    clearTimeout(toastTimer); toastTimer = setTimeout(function () { t.classList.remove('show'); }, 2200);
+  }
+  function copyText(text) {
+    var done = function () { toast('کاپی ہو گیا'); };
+    if (navigator.clipboard && window.isSecureContext) { navigator.clipboard.writeText(text).then(done, fallback); } else { fallback(); }
+    function fallback() {
+      var ta = document.createElement('textarea'); ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); done(); } catch (e) {} document.body.removeChild(ta);
+    }
+  }
+
+  /* ================= product data ================= */
+  function toList(v) {
+    if (Array.isArray(v)) return v.map(function (x) { return String(x).trim(); }).filter(Boolean);
+    return String(v == null ? '' : v).split(/[,،;|\n]+/).map(function (x) { return x.trim(); }).filter(Boolean);
+  }
+  function toImgList(v) {
+    var arr = Array.isArray(v) ? v : String(v == null ? '' : v).split(/[\s,،]+/);
+    return arr.map(function (x) { return imgUrl(String(x)); }).filter(Boolean);
+  }
+  function imgUrl(u) {
+    u = (u || '').trim(); if (!u) return '';
+    var m = u.match(/drive\.google\.com\/file\/d\/([^\/?#]+)/) || u.match(/drive\.google\.com\/(?:open|uc)\?(?:[^#]*&)?id=([^&#]+)/);
+    if (m) return 'https://drive.google.com/thumbnail?id=' + m[1] + '&sz=w1000';
+    if (/^(https?:)?\/\//i.test(u) || /^data:image\//i.test(u) || /^[\w.\-\/]+\.(jpe?g|png|webp|gif|avif|svg)$/i.test(u)) return u;
+    return '';
+  }
+  function toCat(v) {
+    v = String(v || '').toLowerCase();
+    if (/لڑکی|لڑکیاں|بچی|girl/.test(v)) return 'girl';
+    if (/لڑکا|لڑکے|بچہ|boy/.test(v)) return 'boy';
+    return 'both';
+  }
+  function toShow(v) { return !/^(نہیں|نہ|no|0|false|x|hide)$/i.test(String(v == null ? '' : v).trim()); }
+  function normProduct(p, i) {
+    var code = String(p.code || '').trim() || ('MB-' + (101 + i));
+    var soldOut = toList(p.soldOut);
+    var sizes = toList(p.sizes).filter(function (s) { return soldOut.indexOf(s) < 0; });
+    return {
+      code: code, name: String(p.name || '').trim() || code,
+      price: toNum(p.price), oldPrice: toNum(p.oldPrice),
+      sizes: sizes, soldOut: soldOut, cat: toCat(p.category),
+      images: toImgList(p.images), desc: String(p.description || '').trim(),
+      tag: String(p.tag || '').trim(), show: toShow(p.show), idx: i
+    };
+  }
+
+  // Google Sheet / CSV
+  function sheetCsvUrl(u) {
+    u = (u || '').trim();
+    if (/docs\.google\.com\/spreadsheets\/d\/e\//.test(u)) {
+      try { var url = new URL(u); url.pathname = url.pathname.replace(/\/pubhtml$/, '/pub'); url.searchParams.set('output', 'csv'); return url.toString(); } catch (e) { return u; }
+    }
+    var m = u.match(/docs\.google\.com\/spreadsheets\/d\/([\w-]+)/);
+    if (m) { var g = (u.match(/[#&?]gid=(\d+)/) || [])[1]; return 'https://docs.google.com/spreadsheets/d/' + m[1] + '/gviz/tq?tqx=out:csv&headers=1' + (g ? '&gid=' + g : ''); }
+    return u;
+  }
+  function parseCSV(text) {
+    text = String(text).replace(/^﻿/, '');
+    var rows = [], row = [], f = '', q = false, i = 0, c;
+    while (i < text.length) {
+      c = text[i];
+      if (q) {
+        if (c === '"') { if (text[i + 1] === '"') { f += '"'; i += 2; continue; } q = false; i++; continue; }
+        f += c; i++; continue;
+      }
+      if (c === '"') { q = true; i++; continue; }
+      if (c === ',') { row.push(f); f = ''; i++; continue; }
+      if (c === '\r') { i++; continue; }
+      if (c === '\n') { row.push(f); rows.push(row); row = []; f = ''; i++; continue; }
+      f += c; i++;
+    }
+    if (f !== '' || row.length) { row.push(f); rows.push(row); }
+    return rows.filter(function (r) { return r.some(function (x) { return String(x).trim() !== ''; }); });
+  }
+  var COLS = [
+    ['oldPrice', ['پرانی', 'old']],
+    ['price', ['قیمت', 'price', 'rate']],
+    ['soldOut', ['ختم', 'sold']],
+    ['sizes', ['موجود', 'available', 'size', 'سائز']],
+    ['code', ['کوڈ', 'code']],
+    ['name', ['نام', 'name']],
+    ['category', ['کیٹیگری', 'قسم', 'category', 'type']],
+    ['images', ['تصویر', 'تصاویر', 'image', 'photo', 'pic']],
+    ['description', ['تفصیل', 'desc', 'detail']],
+    ['tag', ['ٹیگ', 'tag', 'label']],
+    ['show', ['دکھائیں', 'show', 'visible']]
+  ];
+  function rowsToProducts(rows) {
+    if (!rows.length) return [];
+    var head = rows[0].map(function (h) { return String(h).replace(/^﻿/, '').trim().toLowerCase(); });
+    var map = {};
+    head.forEach(function (h, idx) {
+      for (var k = 0; k < COLS.length; k++) {
+        var key = COLS[k][0];
+        if (map[key] != null) continue;
+        if (COLS[k][1].some(function (w) { return h.indexOf(w) >= 0; })) { map[key] = idx; break; }
+      }
+    });
+    return rows.slice(1).map(function (r) {
+      var o = {}; Object.keys(map).forEach(function (k) { o[k] = r[map[k]]; }); return o;
+    }).filter(function (o) { return (o.name || o.code || '').toString().trim(); });
+  }
+
+  // sizes ordering
+  function sizeKey(s) {
+    var n = parseFloat(normDigits(s).replace(/[^\d.]+/g, ' ').trim().split(' ')[0]);
+    if (isNaN(n)) n = 999;
+    if (/ماہ|مہینے|month|\dm\b/i.test(s)) n = n / 12;
+    var order = Array.isArray(C.sizeOrder) ? C.sizeOrder.indexOf(s) : -1;
+    return order >= 0 ? order - 1000 : n;
+  }
+  function sortSizes(arr) { return arr.slice().sort(function (a, b) { return sizeKey(a) - sizeKey(b) || a.localeCompare(b); }); }
+
+  // placeholder art when no image
+  var PALETTE = [['#FDE4EC', '#F28AA6', '#C2416C'], ['#E3F1FB', '#86BDE8', '#3C7DB5'], ['#E4F6EC', '#7CCBA2', '#2F8F62'], ['#FFF1D6', '#F5B85C', '#B97A16'], ['#EFE7FB', '#B39DE8', '#6F52B8'], ['#FFE6DB', '#F49A7A', '#C25A36']];
+  function hash(s) { var h = 0; for (var i = 0; i < s.length; i++) { h = (h * 31 + s.charCodeAt(i)) | 0; } return Math.abs(h); }
+  function art(p) {
+    var c = PALETTE[hash(p.code) % PALETTE.length], bg = c[0], g = c[1], d = c[2];
+    var hanger = '<path d="M200 58v18" stroke="#C9A7B4" stroke-width="5" stroke-linecap="round"/><path d="M200 50a10 10 0 1 1 10 -10" fill="none" stroke="#C9A7B4" stroke-width="5" stroke-linecap="round"/><path d="M130 118L200 76L270 118" fill="none" stroke="#C9A7B4" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>';
+    var body;
+    if (p.cat === 'girl') {
+      body = '<circle cx="152" cy="132" r="20" fill="' + g + '" opacity=".75"/><circle cx="248" cy="132" r="20" fill="' + g + '" opacity=".75"/>' +
+        '<path d="M158 118H242L250 190H150Z" fill="' + g + '"/><rect x="146" y="186" width="108" height="14" rx="7" fill="' + d + '"/>' +
+        '<path d="M148 198H252L318 388Q200 418 82 388Z" fill="' + g + '"/><path d="M112 350Q200 372 288 350" stroke="#fff" stroke-width="5" fill="none" stroke-dasharray="3 14" stroke-linecap="round" opacity=".7"/>' +
+        '<path d="M186 193l-16-10v20zM214 193l16-10v20z" fill="' + d + '"/><circle cx="200" cy="193" r="7" fill="#fff"/>';
+    } else if (p.cat === 'boy') {
+      body = '<path d="M150 118L182 108Q200 128 218 108L250 118L304 160L280 196L254 180V388H146V180L120 196L96 160Z" fill="' + g + '"/>' +
+        '<path d="M182 108L200 140L218 108" fill="none" stroke="' + d + '" stroke-width="5" stroke-linejoin="round"/>' +
+        '<circle cx="200" cy="170" r="6" fill="#fff"/><circle cx="200" cy="215" r="6" fill="#fff"/><circle cx="200" cy="260" r="6" fill="#fff"/><rect x="214" y="200" width="28" height="30" rx="5" fill="none" stroke="#fff" stroke-width="4" opacity=".7"/>';
+    } else {
+      body = '<path d="M152 118H248L282 152L258 178L252 300Q252 350 222 372H208L200 336L192 372H178Q148 350 148 300L142 178L118 152Z" fill="' + g + '"/>' +
+        '<path d="M176 118Q200 146 224 118" fill="none" stroke="' + d + '" stroke-width="5"/><circle cx="200" cy="190" r="6" fill="#fff"/><circle cx="200" cy="230" r="6" fill="#fff"/>' +
+        '<path d="M160 270Q200 284 240 270" stroke="#fff" stroke-width="4" fill="none" opacity=".6" stroke-linecap="round"/>';
+    }
+    var dots = '<g fill="#fff" opacity=".55"><circle cx="50" cy="60" r="6"/><circle cx="345" cy="95" r="8"/><circle cx="70" cy="420" r="9"/><circle cx="335" cy="430" r="5"/><circle cx="40" cy="250" r="4"/><circle cx="365" cy="280" r="6"/></g>';
+    var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480"><rect width="400" height="480" fill="' + bg + '"/>' + dots + hanger + body + '</svg>';
+    return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+  }
+  function mainImg(p) { return p.images[0] || art(p); }
+
+  /* ================= state ================= */
+  var products = [];
+  var filter = { cat: 'all', size: '' };
+  var cart = store.get('mb_cart', []);
+  if (!Array.isArray(cart)) cart = [];
+  var current = null, picked = '', qty = 1;
+
+  function byCode(code) { for (var i = 0; i < products.length; i++) if (products[i].code === code) return products[i]; return null; }
+
+  /* ================= render: static parts ================= */
+  function renderStatic() {
+    if (C.demo) $('#demoBar').hidden = false;
+    $('#tagline').textContent = C.tagline || '';
+    $('#aboutText').textContent = C.about || '';
+
+    // size chart
+    var sc = Array.isArray(C.sizeChart) ? C.sizeChart : [];
+    var tableHTML = sc.length ? ('<table><thead><tr><th>سائز</th><th>لمبائی (انچ)</th><th>چھاتی (انچ)</th></tr></thead><tbody>' +
+      sc.map(function (r) { return '<tr><td><bdi>' + esc(r.size) + '</bdi></td><td class="num">' + esc(r.length) + '</td><td class="num">' + esc(r.chest) + '</td></tr>'; }).join('') +
+      '</tbody></table>') : '';
+    window.__sizeTable = tableHTML;
+    if (tableHTML) { $('#sizeTable').innerHTML = tableHTML; $('#sizeNote').textContent = C.sizeChartNote || ''; }
+    else { $('#sizes').hidden = true; $all('a[href="#sizes"]').forEach(function (a) { a.hidden = true; }); }
+
+    // trust
+    var acctTitle = (C.payments && C.payments[0] && C.payments[0].title) || 'Minibells';
+    var trust = [
+      'روزانہ کے پارسلز کی پیکنگ ویڈیوز ٹک ٹاک پر',
+      'ہر آرڈر کا ٹریکنگ نمبر، آپ خود پارسل ٹریک کر سکتے ہیں',
+      'سائز پورا نہ آئے تو بدل دیتے ہیں (اسٹاک کے مطابق)',
+      'پیمنٹ صرف ' + acctTitle + ' کے نام والے اکاؤنٹ میں',
+      'آرڈر سے پہلے واٹس ایپ پر جو چاہیں پوچھ لیں'
+    ];
+    $('#trustList').innerHTML = trust.map(function (t) { return '<li>' + esc(t) + '</li>'; }).join('');
+    var tk = $('#tiktokBtn'); if (C.tiktokUrl) tk.href = C.tiktokUrl; else tk.hidden = true;
+    var rv = Array.isArray(C.reviews) ? C.reviews.map(imgUrl).filter(Boolean) : [];
+    if (rv.length) {
+      var r = $('#reviews'); r.hidden = false;
+      r.innerHTML = rv.map(function (u, i) { return '<a href="' + esc(u) + '" target="_blank" rel="noopener"><img loading="lazy" src="' + esc(u) + '" alt="کسٹمر کا ریویو ' + (i + 1) + '"></a>'; }).join('');
+    }
+
+    // payment
+    $('#accounts').innerHTML = accountsHTML();
+    $('#payWarn').textContent = 'پیمنٹ کے بعد اسکرین شاٹ واٹس ایپ پر ضرور بھیجیں۔ ان اکاؤنٹس کے علاوہ کسی اور اکاؤنٹ میں پیمنٹ نہ کریں۔';
+
+    // faq
+    var faqs = [
+      ['کیا آپ کیش آن ڈیلیوری (COD) کرتے ہیں؟', 'نہیں، ہم صرف ایڈوانس پیمنٹ پر آرڈر بھیجتے ہیں۔ کیش آن ڈیلیوری میں پارسل واپس آنے اور کورئیر سے پیمنٹ دیر سے ملنے کی وجہ سے ہم نے یہ طریقہ رکھا ہے۔ آپ کے بھروسے کے لیے ہم ہر آرڈر کا ٹریکنگ نمبر دیتے ہیں۔'],
+      ['کہیں یہ دھوکا تو نہیں؟ ہم آپ پر بھروسہ کیسے کریں؟', 'آپ کا سوال بالکل جائز ہے۔ ہم روزانہ کے پارسلز کی پیکنگ ویڈیوز ٹک ٹاک پر لگاتے ہیں، ہر آرڈر کا ٹریکنگ نمبر دیتے ہیں، اور پیمنٹ صرف ' + acctTitle + ' کے نام والے اکاؤنٹ میں لیتے ہیں۔ آرڈر سے پہلے واٹس ایپ پر جو چاہیں پوچھ سکتے ہیں۔'],
+      ['ڈیلیوری کتنے دن میں ہوتی ہے؟', 'پیمنٹ ملنے کے بعد عام طور پر ' + (C.deliveryDays || '3 سے 5 دن') + ' میں پارسل آپ تک پہنچ جاتا ہے۔ پارسل روانہ ہوتے ہی ہم ٹریکنگ نمبر بھیج دیتے ہیں۔'],
+      ['ڈیلیوری چارجز کتنے ہیں؟', 'پورے پاکستان میں ' + money(C.deliveryCharge || 0) + '۔' + (C.deliveryNote ? ' ' + C.deliveryNote : '')],
+      ['سائز پورا نہ آئے تو کیا ہوگا؟', (Array.isArray(C.exchangePolicy) ? C.exchangePolicy : []).join(' ')],
+      ['صحیح سائز کیسے چنیں؟', 'اوپر دیا گیا سائز چارٹ دیکھیں۔ پھر بھی سمجھ نہ آئے تو بچے کی عمر اور قد واٹس ایپ پر بتائیں، ہم صحیح سائز بتا دیں گے۔'],
+      ['پیمنٹ کیسے کریں؟', 'بینک ٹرانسفر، جاز کیش یا ایزی پیسہ سے۔ تفصیل اوپر "پیمنٹ کی تفصیل" والے حصے میں ہے۔ پیمنٹ کے بعد اسکرین شاٹ واٹس ایپ پر ضرور بھیجیں۔']
+    ];
+    $('#faqList').innerHTML = faqs.filter(function (f) { return f[1]; }).map(function (f) {
+      return '<details><summary>' + esc(f[0]) + '</summary><div class="ans">' + esc(f[1]) + '</div></details>';
+    }).join('');
+
+    // floating whatsapp + footer
+    $('#waFloat').href = waLink('السلام علیکم! مجھے Minibells کے کپڑوں کے بارے میں کچھ پوچھنا ہے۔');
+    var s = [];
+    if (C.whatsappNumber) s.push('<a href="' + esc(waLink('')) + '" target="_blank" rel="noopener">واٹس ایپ: <bdi>' + esc(C.phoneDisplay || ('+' + waNumber())) + '</bdi></a>');
+    if (C.tiktokUrl) s.push('<a href="' + esc(C.tiktokUrl) + '" target="_blank" rel="noopener">TikTok</a>');
+    if (C.instagramUrl) s.push('<a href="' + esc(C.instagramUrl) + '" target="_blank" rel="noopener">Instagram</a>');
+    if (C.facebookUrl) s.push('<a href="' + esc(C.facebookUrl) + '" target="_blank" rel="noopener">Facebook</a>');
+    $('#socials').innerHTML = s.join('');
+    $('#copyNote').textContent = '© ' + new Date().getFullYear() + ' Minibells · منی بیلز';
+    $('#advanceNote').textContent = 'ہم ایڈوانس پیمنٹ پر آرڈر بھیجتے ہیں۔ آرڈر بھیجنے کے بعد پیمنٹ کی تفصیل آپ کو یہیں نظر آ جائے گی۔';
+  }
+
+  function accountsHTML() {
+    var list = Array.isArray(C.payments) ? C.payments : [];
+    return list.map(function (a) {
+      var rows = '<div class="acc-row"><span>اکاؤنٹ ٹائٹل</span><span class="acc-val">' + esc(a.title) + '</span></div>' +
+        '<div class="acc-row"><span>نمبر</span><span style="display:flex;align-items:center;gap:8px"><span class="acc-val">' + esc(a.number) + '</span><button class="copy" type="button" data-copy="' + esc(String(a.number || '').replace(/\s/g, '')) + '">کاپی</button></span></div>';
+      if (a.iban) rows += '<div class="acc-row"><span>IBAN</span><span style="display:flex;align-items:center;gap:8px"><span class="acc-val" style="font-size:12px">' + esc(a.iban) + '</span><button class="copy" type="button" data-copy="' + esc(String(a.iban).replace(/\s/g, '')) + '">کاپی</button></span></div>';
+      return '<div class="acc"><div class="acc-top"><span class="acc-label">' + esc(a.label) + '</span><span class="acc-prov">' + esc(a.provider || '') + '</span></div>' + rows + '</div>';
+    }).join('');
+  }
+
+  /* ================= render: shop ================= */
+  function visible() {
+    return products.filter(function (p) {
+      if (!p.show) return false;
+      if (filter.cat !== 'all' && p.cat !== filter.cat && p.cat !== 'both') return false;
+      if (filter.size && p.sizes.indexOf(filter.size) < 0) return false;
+      return true;
+    }).sort(function (a, b) { return (a.sizes.length ? 0 : 1) - (b.sizes.length ? 0 : 1) || a.idx - b.idx; });
+  }
+  function renderSizeChips() {
+    var all = [];
+    products.forEach(function (p) { if (p.show) p.sizes.concat(p.soldOut).forEach(function (s) { if (all.indexOf(s) < 0) all.push(s); }); });
+    all = sortSizes(all);
+    $('#sizeChips').innerHTML = '<button class="chip' + (filter.size ? '' : ' active') + '" data-size="" type="button">سب سائز</button>' +
+      all.map(function (s) { return '<button class="chip' + (filter.size === s ? ' active' : '') + '" data-size="' + esc(s) + '" type="button"><bdi>' + esc(s) + '</bdi></button>'; }).join('');
+  }
+  function cardHTML(p) {
+    var out = !p.sizes.length;
+    var off = p.oldPrice > p.price && p.price ? Math.round((1 - p.price / p.oldPrice) * 100) : 0;
+    var sizes = out ? '<span class="mini-none">سب سائز ختم</span>' :
+      sortSizes(p.sizes).map(function (s) { return '<span class="mini-size' + (s === filter.size ? ' hit' : '') + '"><bdi>' + esc(s) + '</bdi></span>'; }).join('');
+    return '<article class="card">' +
+      '<button class="card-img" type="button" data-open="' + esc(p.code) + '" aria-label="' + esc(p.name) + '">' +
+      '<img loading="lazy" src="' + esc(mainImg(p)) + '" alt="' + esc(p.name) + '" data-code="' + esc(p.code) + '">' +
+      (p.tag ? '<span class="tag">' + esc(p.tag) + '</span>' : '') + (off && !out ? '<span class="off">-' + off + '%</span>' : '') +
+      (out ? '<span class="sold-veil"><span>سب سائز ختم</span></span>' : '') + '</button>' +
+      '<div class="card-body"><div class="code"><bdi>' + esc(p.code) + '</bdi></div><h3>' + esc(p.name) + '</h3>' +
+      '<div class="price">' + (p.price ? money(p.price) : 'قیمت واٹس ایپ پر') + (off ? ' <s>' + fmt(p.oldPrice) + '</s>' : '') + '</div>' +
+      '<div class="mini-sizes">' + sizes + '</div>' +
+      '<button class="btn ' + (out ? 'btn-line' : 'btn-primary') + ' btn-sm btn-block" type="button" data-open="' + esc(p.code) + '">' + (out ? 'تفصیل دیکھیں' : 'آرڈر کریں') + '</button>' +
+      '</div></article>';
+  }
+  function renderGrid() {
+    var list = visible();
+    var info = '';
+    if (filter.size) info = list.length ? ('سائز ' + iso(filter.size) + ' میں ' + list.length + ' کپڑے موجود ہیں') : '';
+    else info = list.length + ' کپڑے';
+    $('#resultInfo').textContent = info;
+    $('#grid').innerHTML = list.length ? list.map(cardHTML).join('') :
+      '<div class="empty">اس سائز میں ابھی کوئی کپڑا موجود نہیں۔<br><a href="' + esc(waLink('السلام علیکم! کیا ' + (filter.size || '') + ' سائز میں کوئی کپڑا جلد آئے گا؟')) + '" target="_blank" rel="noopener">واٹس ایپ پر پوچھیں کہ کب آئے گا</a></div>';
+    $all('#grid img').forEach(function (img) {
+      img.addEventListener('error', function () { var p = byCode(img.getAttribute('data-code')); if (p && img.src.indexOf('data:') !== 0) img.src = art(p); }, { once: true });
+    });
+  }
+
+  /* ================= sheets (popups) ================= */
+  var openId = null;
+  function openSheet(id) {
+    var el = document.getElementById(id);
+    if (openId && openId !== id) { hideSheet(openId); }
+    else if (!openId) { try { history.pushState({ mbSheet: 1 }, ''); } catch (e) {} }
+    openId = id; el.hidden = false; document.body.classList.add('lock');
+    requestAnimationFrame(function () { requestAnimationFrame(function () { el.classList.add('open'); }); });
+    var body = $('.sheet-body', el); if (body) body.scrollTop = 0;
+  }
+  function hideSheet(id) {
+    var el = document.getElementById(id); if (!el) return;
+    el.classList.remove('open'); el.hidden = true;
+    if (openId === id) openId = null;
+    if (!openId) document.body.classList.remove('lock');
+    if (id === 'thanksSheet') { renderCart(); }
+  }
+  function closeSheet() {
+    if (!openId) return;
+    if (history.state && history.state.mbSheet) { history.back(); } else { hideSheet(openId); }
+  }
+  window.addEventListener('popstate', function () { if (openId) hideSheet(openId); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeSheet(); });
+  $all('.overlay').forEach(function (ov) {
+    ov.addEventListener('click', function (e) { if (e.target === ov || e.target.closest('[data-close]')) closeSheet(); });
+  });
+
+  /* ================= product popup ================= */
+  function openProduct(code) {
+    var p = byCode(code); if (!p) return;
+    current = p; qty = 1;
+    picked = '';
+    if (filter.size && p.sizes.indexOf(filter.size) >= 0) picked = filter.size;
+    else if (p.sizes.length === 1) picked = p.sizes[0];
+    renderProduct();
+    openSheet('productSheet');
+  }
+  function renderProduct() {
+    var p = current, out = !p.sizes.length;
+    var imgs = p.images.length ? p.images : [art(p)];
+    var allSizes = sortSizes(p.sizes.concat(p.soldOut));
+    var off = p.oldPrice > p.price && p.price;
+    $('#pTitle').textContent = p.name;
+    $('#pBody').innerHTML =
+      '<div class="gallery"><img id="pMain" src="' + esc(imgs[0]) + '" alt="' + esc(p.name) + '"></div>' +
+      (imgs.length > 1 ? '<div class="thumbs">' + imgs.map(function (u, i) { return '<button type="button" class="' + (i ? '' : 'active') + '" data-img="' + esc(u) + '" aria-label="تصویر ' + (i + 1) + '"><img src="' + esc(u) + '" alt=""></button>'; }).join('') + '</div>' : '') +
+      '<div class="code" style="margin-top:10px"><bdi>' + esc(p.code) + '</bdi></div>' +
+      '<h3 class="p-name">' + esc(p.name) + '</h3>' +
+      '<div class="price" style="font-size:19px">' + (p.price ? money(p.price) : 'قیمت واٹس ایپ پر') + (off ? ' <s>' + fmt(p.oldPrice) + '</s>' : '') + '</div>' +
+      (p.desc ? '<p class="p-desc">' + esc(p.desc) + '</p>' : '') +
+      '<div class="field-label"><span>سائز چنیں</span></div>' +
+      '<div class="size-pick" id="sizePick">' + allSizes.map(function (s) {
+        var isOut = p.sizes.indexOf(s) < 0;
+        return '<button type="button" class="size-opt' + (isOut ? ' out' : '') + (s === picked ? ' active' : '') + '" data-s="' + esc(s) + '"' + (isOut ? ' aria-disabled="true"' : '') + '><bdi>' + esc(s) + '</bdi>' + (isOut ? '<small>ختم</small>' : '') + '</button>';
+      }).join('') + '</div>' +
+      '<div class="restock" id="restock"' + (out ? '' : ' hidden') + '></div>' +
+      (window.__sizeTable ? '<details class="inline-chart"><summary>سائز چارٹ دیکھیں</summary>' + window.__sizeTable + '</details>' : '') +
+      (out ? '' : '<div class="qty-row"><span>تعداد</span><div class="stepper"><button type="button" data-q="-1" aria-label="کم کریں">−</button><span id="pQty">1</span><button type="button" data-q="1" aria-label="زیادہ کریں">+</button></div></div>');
+    if (out) showRestock(allSizes[0] || '');
+    $('#pOrder').disabled = out; $('#pAdd').disabled = out;
+    $('#pFoot').hidden = out;
+    $all('#pBody img').forEach(function (img) { img.addEventListener('error', function () { if (img.src.indexOf('data:') !== 0) img.src = art(p); }, { once: true }); });
+  }
+  function showRestock(size) {
+    var p = current, box = $('#restock');
+    var msg = 'السلام علیکم! ' + p.name + ' (' + iso(p.code) + ')' + (size ? ' کا ' + iso(size) + ' سائز' : '') + ' دوبارہ کب آئے گا؟';
+    box.innerHTML = (size ? 'یہ سائز ابھی ختم ہے۔ ' : 'یہ کپڑا ابھی ختم ہے۔ ') + '<a href="' + esc(waLink(msg)) + '" target="_blank" rel="noopener">واٹس ایپ پر پوچھیں کہ دوبارہ کب آئے گا</a>';
+    box.hidden = false;
+  }
+  $('#pBody').addEventListener('click', function (e) {
+    var sb = e.target.closest('.size-opt');
+    if (sb) {
+      var s = sb.getAttribute('data-s');
+      if (sb.classList.contains('out')) { showRestock(s); return; }
+      picked = s; $('#restock').hidden = true;
+      $all('.size-opt', $('#pBody')).forEach(function (b) { b.classList.toggle('active', b === sb); });
+      return;
+    }
+    var qb = e.target.closest('[data-q]');
+    if (qb) { qty = Math.max(1, Math.min(20, qty + parseInt(qb.getAttribute('data-q'), 10))); $('#pQty').textContent = qty; return; }
+    var tb = e.target.closest('[data-img]');
+    if (tb) { $('#pMain').src = tb.getAttribute('data-img'); $all('.thumbs button', $('#pBody')).forEach(function (b) { b.classList.toggle('active', b === tb); }); }
+  });
+  function needSize() {
+    if (picked) return false;
+    var sp = $('#sizePick'); sp.classList.remove('shake'); void sp.offsetWidth; sp.classList.add('shake');
+    sp.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    toast('پہلے سائز چنیں'); return true;
+  }
+  $('#pAdd').addEventListener('click', function () {
+    if (needSize()) return;
+    addToCart(current.code, picked, qty);
+    toast('ٹوکری میں ڈال دیا');
+    closeSheet();
+  });
+  $('#pOrder').addEventListener('click', function () {
+    if (needSize()) return;
+    addToCart(current.code, picked, qty);
+    renderCart(); openSheet('cartSheet');
+  });
+
+  /* ================= cart ================= */
+  function saveCart() { store.set('mb_cart', cart); updateCartUI(); }
+  function addToCart(code, size, q) {
+    var key = code + '|' + size;
+    var item = cart.filter(function (i) { return i.key === key; })[0];
+    if (item) item.qty = Math.min(20, item.qty + q); else cart.push({ key: key, code: code, size: size, qty: q });
+    saveCart();
+  }
+  function cartLines() {
+    return cart.map(function (i) { var p = byCode(i.code); return p ? { item: i, p: p, total: p.price * i.qty } : null; }).filter(Boolean);
+  }
+  function totals() {
+    var lines = cartLines(); var sub = lines.reduce(function (a, l) { return a + l.total; }, 0);
+    var del = lines.length ? (Number(C.deliveryCharge) || 0) : 0;
+    return { lines: lines, sub: sub, del: del, total: sub + del, count: lines.reduce(function (a, l) { return a + l.item.qty; }, 0) };
+  }
+  function updateCartUI() {
+    var t = totals();
+    $('#cartCount').textContent = t.count;
+    $('#cbCount').textContent = t.count;
+    $('#cbTotal').textContent = money(t.total);
+    document.body.classList.toggle('has-cart', t.count > 0);
+  }
+  function renderCart() {
+    var t = totals();
+    if (!t.lines.length) {
+      $('#cartItems').innerHTML = '<div class="center" style="padding:30px 0"><p style="color:var(--muted)">آپ کی ٹوکری ابھی خالی ہے</p><button class="btn btn-primary" type="button" data-close style="margin-top:12px">کپڑے دیکھیں</button></div>';
+      $('#cartFilled').hidden = true; $('#cartFoot').hidden = true; return;
+    }
+    $('#cartFilled').hidden = false; $('#cartFoot').hidden = false;
+    $('#cartItems').innerHTML = t.lines.map(function (l) {
+      return '<div class="ci"><img src="' + esc(mainImg(l.p)) + '" alt="">' +
+        '<div class="ci-main"><div class="ci-name">' + esc(l.p.name) + '</div>' +
+        '<div class="ci-meta">سائز: <bdi>' + esc(l.item.size) + '</bdi> · کوڈ: <bdi>' + esc(l.p.code) + '</bdi></div>' +
+        '<div class="ci-bottom"><div class="stepper sm"><button type="button" data-cq="-1" data-key="' + esc(l.item.key) + '" aria-label="کم کریں">−</button><span>' + l.item.qty + '</span><button type="button" data-cq="1" data-key="' + esc(l.item.key) + '" aria-label="زیادہ کریں">+</button></div>' +
+        '<span class="ci-price">' + money(l.total) + '</span></div>' +
+        '<button class="ci-del" type="button" data-del="' + esc(l.item.key) + '">ہٹا دیں</button></div></div>';
+    }).join('');
+    $('#cartSum').innerHTML =
+      '<div class="sum-row"><span>کپڑے (' + t.count + ')</span><b>' + money(t.sub) + '</b></div>' +
+      '<div class="sum-row"><span>ڈیلیوری</span><b>' + money(t.del) + '</b></div>' +
+      '<div class="sum-row total"><span>کل رقم</span><b>' + money(t.total) + '</b></div>';
+  }
+  $('#cartItems').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-cq]'), d = e.target.closest('[data-del]');
+    if (b) {
+      var key = b.getAttribute('data-key'), item = cart.filter(function (i) { return i.key === key; })[0];
+      if (item) { item.qty = Math.max(1, Math.min(20, item.qty + parseInt(b.getAttribute('data-cq'), 10))); saveCart(); renderCart(); }
+    } else if (d) {
+      var k = d.getAttribute('data-del'); cart = cart.filter(function (i) { return i.key !== k; }); saveCart(); renderCart();
+    }
+  });
+  function openCart() { renderCart(); openSheet('cartSheet'); }
+  $('#cartBtn').addEventListener('click', openCart);
+  $('#cartBarBtn').addEventListener('click', openCart);
+
+  // customer form
+  var saved = store.get('mb_customer', {});
+  ['name', 'phone', 'city', 'address'].forEach(function (k) { if (saved && saved[k]) $('#orderForm').elements[k].value = saved[k]; });
+  $('#orderForm').addEventListener('input', function (e) { var f = e.target.closest('.fld'); if (f) f.classList.remove('err'); });
+
+  function normPhone(v) {
+    var d = normDigits(v).replace(/[^\d+]/g, '');
+    if (/^\+?92\d{10}$/.test(d)) d = '0' + d.replace(/^\+?92/, '');
+    return d;
+  }
+  $('#orderForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var f = this.elements, t = totals();
+    if (!t.lines.length) return;
+    var v = { name: f.name.value.trim(), phone: normPhone(f.phone.value), city: f.city.value.trim(), address: f.address.value.trim(), note: f.note.value.trim() };
+    var bad = [];
+    if (v.name.length < 2) bad.push('name');
+    if (!/^03\d{9}$/.test(v.phone)) bad.push('phone');
+    if (v.city.length < 2) bad.push('city');
+    if (v.address.length < 8) bad.push('address');
+    $all('.fld', this).forEach(function (el) { el.classList.toggle('err', bad.indexOf(el.getAttribute('data-f')) >= 0); });
+    if (bad.length) {
+      var first = $('.fld[data-f="' + bad[0] + '"]', this);
+      first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setTimeout(function () { var inp = $('input,textarea', first); if (inp) inp.focus({ preventScroll: true }); }, 300);
+      toast('براہ کرم سرخ خانے درست کریں'); return;
+    }
+    store.set('mb_customer', { name: v.name, phone: v.phone, city: v.city, address: v.address });
+
+    var d = new Date();
+    var orderNo = 'MB-' + ('0' + d.getDate()).slice(-2) + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + Math.floor(100 + Math.random() * 900);
+    var L = [];
+    L.push('*نیا آرڈر — Minibells* 🎀');
+    L.push('آرڈر نمبر: ' + iso(orderNo));
+    L.push('━━━━━━━━━━');
+    t.lines.forEach(function (l, i) {
+      L.push((i + 1) + '۔ ' + l.p.name);
+      L.push('   کوڈ: ' + iso(l.p.code) + ' | سائز: ' + iso(l.item.size) + ' | تعداد: ' + l.item.qty);
+      L.push('   قیمت: ' + money(l.total));
+    });
+    L.push('━━━━━━━━━━');
+    L.push('کپڑے: ' + money(t.sub));
+    L.push('ڈیلیوری: ' + money(t.del));
+    L.push('*کل رقم: ' + money(t.total) + '*');
+    L.push('');
+    L.push('*ڈیلیوری کی تفصیل*');
+    L.push('نام: ' + v.name);
+    L.push('موبائل: ' + v.phone);
+    L.push('شہر: ' + v.city);
+    L.push('پتہ: ' + v.address);
+    if (v.note) L.push('نوٹ: ' + v.note);
+    var url = waLink(L.join('\n'));
+
+    $('#toast').classList.remove('show');
+    showThanks(orderNo, t.total, url);
+    cart = []; saveCart();
+    var w = null;
+    try { w = window.open(url, '_blank'); } catch (err) {}
+    if (!w) { setTimeout(function () { location.href = url; }, 150); }
+  });
+
+  function showThanks(orderNo, total, url) {
+    $('#tWa').href = url;
+    $('#tBody').innerHTML =
+      '<div class="center"><div class="done-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#1D7A55" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>' +
+      '<p style="font-weight:700;font-size:18px">آپ کا آرڈر تیار ہے</p>' +
+      '<p>آرڈر نمبر: <span class="order-no">' + esc(orderNo) + '</span></p></div>' +
+      '<ol class="todo">' +
+      '<li><span>واٹس ایپ کھلے گا، اس میں آرڈر لکھا ہوا ہوگا۔ <b>"Send" کا بٹن ضرور دبائیں۔</b></span></li>' +
+      '<li><span>کل رقم <span class="big-total">' + esc(money(total)) + '</span> نیچے دیے گئے کسی بھی اکاؤنٹ میں بھیجیں۔</span></li>' +
+      '<li><span>پیمنٹ کا اسکرین شاٹ اسی واٹس ایپ چیٹ میں بھیجیں۔ پارسل روانہ ہوتے ہی ٹریکنگ نمبر آپ کو مل جائے گا۔</span></li>' +
+      '</ol>' +
+      '<div class="accounts">' + accountsHTML() + '</div>';
+    openSheet('thanksSheet');
+  }
+
+  // global clicks
+  document.addEventListener('click', function (e) {
+    var o = e.target.closest('[data-open]'); if (o) { openProduct(o.getAttribute('data-open')); return; }
+    var c = e.target.closest('[data-copy]'); if (c) { copyText(c.getAttribute('data-copy')); return; }
+  });
+  $('#catChips').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-cat]'); if (!b) return;
+    filter.cat = b.getAttribute('data-cat');
+    $all('#catChips .chip').forEach(function (x) { x.classList.toggle('active', x === b); });
+    renderGrid();
+  });
+  $('#sizeChips').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-size]'); if (!b) return;
+    filter.size = b.getAttribute('data-size');
+    $all('#sizeChips .chip').forEach(function (x) { x.classList.toggle('active', x === b); });
+    renderGrid();
+  });
+
+  /* ================= boot ================= */
+  function useProducts(list) {
+    products = list.map(normProduct);
+    // drop cart items that no longer exist / sold out
+    var before = cart.length;
+    cart = cart.filter(function (i) { var p = byCode(i.code); return p && p.sizes.indexOf(i.size) >= 0; });
+    if (cart.length !== before) toast('ٹوکری کی کچھ چیزیں اب ختم ہو گئی ہیں');
+    saveCart();
+    renderSizeChips(); renderGrid();
+  }
+  function loadError() {
+    $('#resultInfo').textContent = '';
+    $('#grid').innerHTML = '<div class="empty">کپڑوں کی لسٹ لوڈ نہیں ہو سکی۔ انٹرنیٹ چیک کر کے صفحہ دوبارہ کھولیں، یا<br><a href="' + esc(waLink('السلام علیکم! مجھے کپڑے دیکھنے ہیں۔')) + '" target="_blank" rel="noopener">واٹس ایپ پر کپڑے دیکھیں</a></div>';
+  }
+
+  renderStatic();
+  updateCartUI();
+  if (C.productsSheetUrl) {
+    fetch(sheetCsvUrl(C.productsSheetUrl), { cache: 'no-store' })
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
+      .then(function (txt) {
+        if (/^\s*</.test(txt)) throw new Error('Not CSV (sheet published?)');
+        var list = rowsToProducts(parseCSV(txt));
+        if (!list.length) throw new Error('No products in sheet');
+        useProducts(list);
+      })
+      .catch(function (err) { console.warn('[Minibells] Sheet load failed:', err); loadError(); });
+  } else {
+    useProducts(Array.isArray(C.products) ? C.products : []);
+  }
+})();
+</script>
+</body>
+</html>
