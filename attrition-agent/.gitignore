@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+data/synthetic/
+data/real/
+*.local.xlsx
