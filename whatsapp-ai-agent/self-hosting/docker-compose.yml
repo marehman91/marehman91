@@ -1,0 +1,40 @@
+# Self-host n8n on your own server (VPS) with automatic HTTPS.
+# You need: a server with Docker, and a domain/subdomain (e.g. n8n.yourbusiness.com)
+# whose DNS "A record" points to the server's IP address.
+#
+#   1. cp .env.example .env    and fill it in
+#   2. docker compose up -d
+#   3. open https://YOUR_DOMAIN and create your n8n account
+#
+# WhatsApp needs a public HTTPS address to send messages to — Caddy below gets
+# a free HTTPS certificate for your domain automatically.
+services:
+  n8n:
+    image: docker.n8n.io/n8nio/n8n:2.48.7   # pinned version; update on purpose, not by accident
+    restart: unless-stopped
+    environment:
+      - N8N_HOST=${DOMAIN}
+      - N8N_PROTOCOL=https
+      - N8N_PROXY_HOPS=1
+      - WEBHOOK_URL=https://${DOMAIN}/
+      - GENERIC_TIMEZONE=${TIMEZONE}
+      - TZ=${TIMEZONE}
+      - N8N_ENCRYPTION_KEY=${N8N_ENCRYPTION_KEY}
+    volumes:
+      - n8n_data:/home/node/.n8n
+
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    command: caddy reverse-proxy --from ${DOMAIN} --to n8n:5678
+    volumes:
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  n8n_data:
+  caddy_data:
+  caddy_config:
